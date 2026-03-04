@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="site-name" href="/">{{ site.title }}</a>
+      <nav>
+        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+        <a href="/writing/" {% if page.url contains "/writing" %}class="active"{% endif %}>Writing</a>
+      </nav>
+    </aside>
+    <main class="main">
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>
