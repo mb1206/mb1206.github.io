@@ -1,0 +1,120 @@
+:root {
+  --bg: #fdfcf8;
+  --text: #1a1a1a;
+  --muted: #888;
+  --accent: #d97706;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  min-width: 200px;
+  padding: 48px 24px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.sidebar .site-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.sidebar nav { display: flex; flex-direction: column; gap: 8px; }
+
+.sidebar nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active { color: var(--accent); }
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 60px 64px;
+  max-width: 760px;
+}
+
+/* Home page */
+.home h1 { font-size: 1.5rem; font-weight: normal; margin-bottom: 12px; }
+.home .bio { color: var(--muted); font-size: 0.95rem; }
+
+/* Writing index */
+.writing-list { list-style: none; }
+
+.writing-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.writing-list li:first-child { border-top: 1px solid #e5e5e5; }
+
+.writing-list a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.writing-list a:hover { color: var(--accent); }
+
+.writing-list .post-date {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Post */
+.post-header { margin-bottom: 48px; border-bottom: 1px solid #e5e5e5; padding-bottom: 24px; }
+
+.post-header h1 {
+  font-size: 1.9rem;
+  font-weight: normal;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.post-header h1 em { font-style: italic; color: var(--accent); font-size: 1.2rem; font-family: system-ui, sans-serif; }
+
+.post-meta { font-size: 0.85rem; color: var(--muted); }
+
+.post-body p { margin-bottom: 1.4em; }
+.post-body a { color: var(--accent); }
+.post-body em { font-style: italic; }
+.post-body strong { font-weight: bold; }
+
+.post-body code {
+  font-family: monospace;
+  background: #f0ede6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e5e5e5; padding: 24px; }
+  .sidebar nav { flex-direction: row; gap: 16px; }
+  .main { padding: 32px 24px; }
+}
