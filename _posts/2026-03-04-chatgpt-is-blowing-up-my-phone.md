@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "chatgpt\* is blowing up my phone\*"
+title: "chatgpt is blowing up my phone"
 subtitle: "\"claude code is blowing up my mind\" just didn't have the same ring to it"
 date: 2026-03-04
 ---
